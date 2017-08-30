@@ -6,11 +6,11 @@ passport.use(
   new GoogleStrategy(
     {
       clientID: keys.googleClientID,
-      secretID: keys.googleClientSecret,
+      clientSecret: keys.googleClientSecret,
       callbackURL: '/auth/google/callback'
     },
     (accessToken, refreshToken, profile, done) => {
-      console.log('acces Token', accessToken);
+      console.log('access Token', accessToken);
       console.log('Refresh Token', refreshToken);
       console.log('Profile:', profile);
     }
